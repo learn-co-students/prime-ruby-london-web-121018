@@ -1,15 +1,15 @@
 
 def prime?(number)
   if (number <= 0 || number == 1)
-     false
+    return false
   else
     final = 1
     array = (1..(number-1)).to_a
     array.each {|i| final = final * i}
-    if ((final +1) % number == 0)
-       true
+    if (final % (final +1) == 0)
+      return true
     else
-       false
+      return false
     end
   end
 end
